@@ -1,0 +1,9 @@
+.list {
+  display: flex; }
+
+body {
+  background-color: #c0c0c0;
+  color: white;
+  font-size: 48px; }
+  body div {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }

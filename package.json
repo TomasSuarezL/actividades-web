@@ -1,0 +1,28 @@
+{
+  "name": "actividades",
+  "version": "1.0.0",
+  "description": "Front End Actividades CARP",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "css-loader": "^0.28.8",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "nodemon": "^1.14.10",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
