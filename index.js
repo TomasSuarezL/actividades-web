@@ -12,6 +12,10 @@ app.get('/', function(req,res){
    res.sendFile("index.html"); 
 });
 
+app.get('/deportista/:deportistaId', function(req,res){
+    res.sendFile("/views/deportista.html",{root: __dirname});
+ });
+
 // app.use('/api/todos', todoRoutes);
 
 app.listen(PORT , function(){

@@ -1,5 +1,95 @@
 
-.list {
-    display: flex;
+span {
+    color: $primary-dark;
+}
+
+.dynatable-search {
+    padding-left: 6px;
+    margin-right: 16px;
+    background-color: $primary;
+    opacity: 0.85;  
+    color: $white;
+}
+
+.dynatable-per-page, .dynatable-record-count {
+    margin-left: 16px;
+}
+
+.dynatable-per-page {
+    background-color: $primary;
+    opacity: 0.85;
+    padding: 8px 0 10px 6px;
+    &-label {
+        color: $white;
+    }
+}
+
+select, input {
+    border: none;
+    padding: 10px;
+    background-color: rgba(3,3,3,0.1);
+    color: $white;
+
+    option {
+        background-color: $primary;
+    }
+}
+
+.table-container {
+    display: none;
+}
+
+#deportistas-table {
+    width: 100%;
+    font: 13px 'Raleway';
+    margin-bottom: 16px;
+    border-spacing: 0px;
+    border: 1px solid #ccc;
+
+    tbody tr {
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
+        background-color: $background;
+        color: $primary-dark;
+
+        &:hover {
+            background-color: $primary-light;
+        }
+
+        &.disabled {
+            background-color: rgba(200, 200, 200, 0.5);
+            color: rgba(91, 102, 106, 0.618);
+        }
+
+    }
+
+    th {
+        background-color: $primary;
+        padding: 8px;
+        border-bottom: 1px solid $white;
+
+        &.hidden{
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+    td {
+        min-width: 0;
+        height: 4rem;
+        text-align: start;
+        padding: 16px 8px;
+
+        border-color: $primary-dark;
+        border-bottom: 1px solid #ccc;
+        font: 400 12px 'Montserrat';
+    }
+
+}
+
+ul {
+    margin: 0;
 }
 

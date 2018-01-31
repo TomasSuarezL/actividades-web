@@ -1,9 +1,155 @@
-.list {
-  display: flex; }
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:300,400|Raleway:300,400,700|Roboto:300,900");
+span {
+  color: #373D3F; }
+
+.dynatable-search {
+  padding-left: 6px;
+  margin-right: 16px;
+  background-color: #C03221;
+  opacity: 0.85;
+  color: #F5F3EE; }
+
+.dynatable-per-page, .dynatable-record-count {
+  margin-left: 16px; }
+
+.dynatable-per-page {
+  background-color: #C03221;
+  opacity: 0.85;
+  padding: 8px 0 10px 6px; }
+  .dynatable-per-page-label {
+    color: #F5F3EE; }
+
+select, input {
+  border: none;
+  padding: 10px;
+  background-color: rgba(3, 3, 3, 0.1);
+  color: #F5F3EE; }
+  select option, input option {
+    background-color: #C03221; }
+
+.table-container {
+  display: none; }
+
+#deportistas-table {
+  width: 100%;
+  font: 13px 'Raleway';
+  margin-bottom: 16px;
+  border-spacing: 0px;
+  border: 1px solid #ccc; }
+  #deportistas-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    background-color: rgba(225, 225, 232, 0.4);
+    color: #373D3F; }
+    #deportistas-table tbody tr:hover {
+      background-color: #CBCBD1; }
+    #deportistas-table tbody tr.disabled {
+      background-color: rgba(200, 200, 200, 0.5);
+      color: rgba(91, 102, 106, 0.618); }
+  #deportistas-table th {
+    background-color: #C03221;
+    padding: 8px;
+    border-bottom: 1px solid #F5F3EE; }
+    #deportistas-table th.hidden {
+      display: none; }
+    #deportistas-table th a {
+      text-decoration: none; }
+  #deportistas-table td {
+    min-width: 0;
+    height: 4rem;
+    text-align: start;
+    padding: 16px 8px;
+    border-color: #373D3F;
+    border-bottom: 1px solid #ccc;
+    font: 400 12px 'Montserrat'; }
+
+ul {
+  margin: 0; }
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  height: 3.4rem;
+  background: #C03221;
+  color: #F5F3EE;
+  font-family: 'Roboto';
+  font-size: 20px;
+  z-index: 3;
+  box-shadow: 1px 1px 2px #373D3F; }
+  .navbar img {
+    width: 31px;
+    height: 36px;
+    padding-left: 16px; }
+  .navbar .navbar-title {
+    flex: 3 3 360px;
+    margin: 0 0 0 12px;
+    text-align: center; }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
+
+.loader {
+  animation: spin 1s ease-in-out infinite alternate both;
+  height: 100px;
+  position: relative;
+  width: 100px;
+  margin: auto; }
+  .loader svg:not(#circle-middle) {
+    animation: spin 1s ease-in-out infinite alternate both;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    transform-origin: bottom center; }
+
+.loader svg:nth-of-type(1):not(#circle-middle) {
+  transform: rotate(30deg); }
+
+.loader svg:nth-of-type(2):not(#circle-middle) {
+  transform: rotate(60deg); }
+
+.loader svg:nth-of-type(3):not(#circle-middle) {
+  transform: rotate(90deg); }
+
+.loader svg:nth-of-type(4):not(#circle-middle) {
+  transform: rotate(120deg); }
+
+.loader svg:nth-of-type(5):not(#circle-middle) {
+  transform: rotate(150deg); }
+
+.loader svg:nth-of-type(6):not(#circle-middle) {
+  transform: rotate(180deg); }
+
+.loader svg:nth-of-type(7):not(#circle-middle) {
+  transform: rotate(210deg); }
+
+.loader svg:nth-of-type(8):not(#circle-middle) {
+  transform: rotate(240deg); }
+
+.loader svg:nth-of-type(9):not(#circle-middle) {
+  transform: rotate(270deg); }
+
+.loader svg:nth-of-type(10):not(#circle-middle) {
+  transform: rotate(300deg); }
+
+.loader svg:nth-of-type(11):not(#circle-middle) {
+  transform: rotate(330deg); }
+
+.loader svg:nth-of-type(12):not(#circle-middle) {
+  transform: rotate(360deg); }
+
+.loader svg:nth-of-type(13):not(#circle-middle) {
+  transform: rotate(390deg); }
 
 body {
-  background-color: #c0c0c0;
-  color: white;
-  font-size: 48px; }
-  body div {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  background-color: #F5F3EE;
+  background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
+  padding: 16px;
+  font-family: 'Raleway';
+  padding-top: 4.5rem; }

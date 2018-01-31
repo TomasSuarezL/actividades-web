@@ -1,25 +1,56 @@
 <head>
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="jquery.dynatable.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <div class="navbar">
-        <img src="">
+        <img src="River_Plate.png">
         <h4 class="navbar-title">Club Atlético River Plate</h4>
-        <a id="tecnicos" class=""><i class="material-icons">list</i>Pedidos</button>
-        <a id="monitor" class="" ><i class="material-icons">pie_chart</i>Monitor</button>
-        <a id="report" class="" onclick=""><i class="material-icons">insert_chart</i>Reporte</button>
-        <a class="navbar-button" onclick=""><i class="material-icons">menu</i></a>
+        <a id="tecnicos" class=""></button>
     </div>
-            
-    <header>
-        <h1>Acti<span>vidades</span></h1>
-        <h2>A simple todo list app built with node</h2>
-    </header>
-    <section class="form">
-        <input type="text" name="todoInput" id="todoInput" placeholder="Insert your task here . . ."/>
-    </section>
-
-    <ul class ="list">
-    </ul>
-<script type="text/javascript" src="bundle.js"></script>
+    <div class="loader">
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100" id=circle-middle><circle fill=#C03221 cx=50 cy=50 r="6"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+            <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
+    </div>
+    <div class="table-container">
+        <table id="deportistas-table">
+            <thead>
+              <th class="hidden">Id</th>
+              <th>Orden</th>
+              <th>Documento</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Debito</th>
+              <th>Tarjeta</th>
+              <th>Descuento</t4h>
+              <th>Num Socio</th>          
+              <th>Observaciones</th>
+              <th>Turno1</th>
+              <th>Turno2</th>
+              <th class="hidden">Habilitado</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>  
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
+    <script type="text/javascript" src="/jquery.dynatable.js"></script>
 </body>

@@ -1,16 +1,20 @@
-
-$background: #c0c0c0;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:300,400|Raleway:300,400,700|Roboto:300,900');
+$background: rgba(225, 225, 232, 0.4);
+$primary: #C03221;
+$primary-dark: #373D3F;
+$primary-light: #CBCBD1;
+$white: #F5F3EE;
 
 @import 'deportistas';
+@import 'navbar';
+@import 'loader';
 
 body {
-  background-color: $background;
-  color: white;
-  font-size: 48px;
-
-  div {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+  background-color: $white;
+  background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
+  padding: 16px;
+  font-family: 'Raleway';
+  padding-top: 4.5rem;
 }
 
 

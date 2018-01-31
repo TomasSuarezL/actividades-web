@@ -1,0 +1,32 @@
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    height: 3.4rem;
+    background: $primary;
+    color: $white;
+    font-family: 'Roboto';
+    font-size: 20px;
+    z-index: 3;
+    box-shadow: 1px 1px 2px $primary-dark;
+     
+    img {
+        width: 31px;
+        height: 36px;
+        padding-left: 16px;
+     }
+
+     .navbar-title {
+        flex: 3 3 360px;
+        margin: 0 0 0 12px; 
+        text-align: center;
+    }
+
+    }
+

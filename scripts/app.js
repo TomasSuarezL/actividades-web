@@ -1,20 +1,33 @@
-import $ from 'jquery';
-import '../static/app.css';
-import printMe from './print.js';
-
+// import $ from 'jquery';
+// import printMe from './print.js';
 $(document).ready(function() {
-    
-    $("h2").addClass('hello');
+   
+    $.get("http://192.168.2.4/actividadesapi/api/deportistas?year=2017")
+    .then(function(data){
+        $("#deportistas-table").bind('dynatable:afterUpdate', (x,y) => {
+            let trs = $('tbody tr');
+            for (let i=0; i < trs.length; i++){
+                if (trs[i].children[12].innerHTML == "Deshabilitado"){
+                    $(trs[i]).addClass("disabled");
+                }
+            }
+        });
 
-    var btn = document.createElement('button');
+        $('#deportistas-table').dynatable({
+            dataset: {
+              records: data
+            }
+        });
 
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+        var trs = $('tbody tr').on('click', function() {
+            window.location.href = '/deportista/'+ $(this)[0].children[0].innerHTML;
+        });
 
-    document.body.appendChild(btn);
-
+        $('.loader').fadeOut(300);
+        $(".table-container").fadeIn(300);
+    });
+   
 });
-
 
 
 
