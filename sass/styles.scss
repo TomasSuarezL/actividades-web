@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:300,400|Raleway:300,400,700|Roboto:300,900');
-$background: rgba(225, 225, 232, 0.4);
-$primary: #C03221;
-$primary-dark: #373D3F;
-$primary-light: #CBCBD1;
-$white: #F5F3EE;
 
+@import 'theme';
 @import 'deportistas';
+@import 'deportista';
 @import 'navbar';
 @import 'loader';
 
@@ -14,7 +10,8 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
   padding: 16px;
   font-family: 'Raleway';
-  padding-top: 4.5rem;
+  font-size: 13px;
+  padding-bottom: 4rem;
 }
 
 

@@ -1,0 +1,116 @@
+
+#id-deportista {
+    display: none;
+}
+
+#apenom {
+    display: flex;
+    flex-direction: row;
+    margin: 3.3rem 16px 0 16px;
+    color: $primary;
+    font-size: 16px;
+    background-color: whitesmoke; 
+    box-shadow: 1px 1px 3px $primary50;
+
+    p {
+        margin: 0;
+        padding: 16px;
+        background-color: $primary;
+        color: whitesmoke;
+
+        &.apenom-header {
+            flex: 1;
+            margin-left: 16px;
+        }
+    }
+
+    span {
+        color: whitesmoke;
+        float: right;
+        font-size: 14px;
+    }
+}
+
+.deportistas-data {
+    display: flex;
+    flex-direction: row;
+    font: 400 14px 'Montserrat';
+
+    .deportistas-data-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+}
+
+.deportistas-data-card{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px $primary50;
+    margin: 16px;
+
+    .deportistas-data-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $primary;
+        padding: 8px;
+        height: 1.5rem;
+        border-bottom: 1px solid $primary30;
+        border-left: 4px solid $primary;
+
+        &.header {
+            display: flex;
+            align-items: center;
+            background-color: $primary;
+            color: white;   
+        }
+
+        &.pago {
+            color: $primary-dark;
+            font: 400 14px 'Montserrat';
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        p {
+            flex: 2;
+            margin: 0;
+        }
+
+        span{
+            flex:1;
+            color: $primary80;
+            font-size: 12px;
+            font-weight: 400;
+            margin-right: 4px;
+
+            &.span2 {
+                margin-left: 16px;
+            }
+        }
+    }
+}    
+
+.rechazado {
+    background-color: lightcoral;
+}
+
+.aceptado {
+    background-color: lightgreen;
+}
+
+.pendiente {
+    background-color: lightblue;
+}
+
+.cancelado {
+    background-color: lightgrey;
+    opacity: 0.8;
+}

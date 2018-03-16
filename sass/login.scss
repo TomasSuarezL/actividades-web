@@ -1,0 +1,83 @@
+
+@import 'theme';
+@import 'navbar';
+@import 'loader';
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $white;
+    background: url("../river_plate_estadio.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Raleway';
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.mask {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(139, 0, 0, 0.255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 35%;
+    background-color: rgb(245, 245, 245);
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        
+        .login-header {
+            padding: 16px;
+            background-color: $primary;
+            color: white;
+            font: 600 15px 'Roboto';
+        }
+
+        .login-form {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+
+            input{
+                margin: 16px;
+                padding: 8px;
+            }
+        }
+    
+        button {
+            padding: 8px;
+            margin: 16px;
+            border: none;
+            color: white;
+            background-color: $primary;
+            cursor: pointer;
+            transition: background-color 0.35s ease;
+            &:hover{
+                background-color: $primary-dark;
+            }
+        }
+    }
+}
+
+
+
+
+
+

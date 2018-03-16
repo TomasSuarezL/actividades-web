@@ -8,25 +8,39 @@
     flex-direction: row;
     align-content: center;
     align-items: center;
-    height: 3.4rem;
+    height: 3rem;
     background: $primary;
     color: $white;
     font-family: 'Roboto';
-    font-size: 20px;
+    font-size: 16px;
     z-index: 3;
-    box-shadow: 1px 1px 2px $primary-dark;
+    border-bottom: 1px solid rgba(3,3,3,0.25);
      
     img {
         width: 31px;
         height: 36px;
         padding-left: 16px;
-     }
+    }
 
-     .navbar-title {
+    .navbar-title {
         flex: 3 3 360px;
         margin: 0 0 0 12px; 
         text-align: center;
     }
 
+    .btn-back{
+        margin-right: 8px;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        font: 600 18px 'Montserrat';
+        background-color: transparent;
+        border: none;
+        color: white;
+    
+        &:hover{
+            color: $primary50;
+        }
     }
+}
 

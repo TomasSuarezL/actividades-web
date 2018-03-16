@@ -21,25 +21,26 @@ span {
 
 select, input {
   border: none;
-  padding: 10px;
+  padding: 8px;
   background-color: rgba(3, 3, 3, 0.1);
   color: #F5F3EE; }
   select option, input option {
     background-color: #C03221; }
 
 .table-container {
-  display: none; }
+  display: none;
+  margin-top: 5rem; }
 
 #deportistas-table {
   width: 100%;
-  font: 13px 'Raleway';
+  font: 12px 'Raleway';
   margin-bottom: 16px;
   border-spacing: 0px;
   border: 1px solid #ccc; }
   #deportistas-table tbody tr {
     cursor: pointer;
     transition: background-color 0.3s ease-in;
-    background-color: rgba(225, 225, 232, 0.4);
+    background-color: rgba(233, 233, 240, 0.535);
     color: #373D3F; }
     #deportistas-table tbody tr:hover {
       background-color: #CBCBD1; }
@@ -48,23 +49,144 @@ select, input {
       color: rgba(91, 102, 106, 0.618); }
   #deportistas-table th {
     background-color: #C03221;
-    padding: 8px;
-    border-bottom: 1px solid #F5F3EE; }
+    border-bottom: 1px solid #F5F3EE;
+    height: 3.8rem; }
     #deportistas-table th.hidden {
       display: none; }
     #deportistas-table th a {
       text-decoration: none; }
   #deportistas-table td {
     min-width: 0;
-    height: 4rem;
+    height: 3.8rem;
     text-align: start;
-    padding: 16px 8px;
     border-color: #373D3F;
     border-bottom: 1px solid #ccc;
-    font: 400 12px 'Montserrat'; }
+    font: 400 11px 'Montserrat'; }
 
 ul {
   margin: 0; }
+
+.filtros {
+  display: flex;
+  flex-direction: row;
+  background-color: #C03221;
+  box-shadow: 1px 1px 2px #373D3F;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  z-index: 3; }
+  .filtros select {
+    width: 14rem; }
+  .filtros button {
+    width: 10rem;
+    background-color: rgba(3, 3, 3, 0.1);
+    margin-left: auto;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    outline: none; }
+    .filtros button:hover {
+      background-color: rgba(3, 3, 3, 0.25); }
+
+.totales {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  background-color: #C03221;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  .totales div {
+    flex: 1;
+    color: #F5F3EE; }
+
+#id-deportista {
+  display: none; }
+
+#apenom {
+  display: flex;
+  flex-direction: row;
+  margin: 3.3rem 16px 0 16px;
+  color: #C03221;
+  font-size: 16px;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.503); }
+  #apenom p {
+    margin: 0;
+    padding: 16px;
+    background-color: #C03221;
+    color: whitesmoke; }
+    #apenom p.apenom-header {
+      flex: 1;
+      margin-left: 16px; }
+  #apenom span {
+    color: whitesmoke;
+    float: right;
+    font-size: 14px; }
+
+.deportistas-data {
+  display: flex;
+  flex-direction: row;
+  font: 400 14px 'Montserrat'; }
+  .deportistas-data .deportistas-data-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; }
+
+.deportistas-data-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.503);
+  margin: 16px; }
+  .deportistas-data-card .deportistas-data-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #C03221;
+    padding: 8px;
+    height: 1.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.303);
+    border-left: 4px solid #C03221; }
+    .deportistas-data-card .deportistas-data-row.header {
+      display: flex;
+      align-items: center;
+      background-color: #C03221;
+      color: white; }
+    .deportistas-data-card .deportistas-data-row.pago {
+      color: #8c1608;
+      font: 400 14px 'Montserrat'; }
+    .deportistas-data-card .deportistas-data-row i {
+      margin-right: 8px; }
+    .deportistas-data-card .deportistas-data-row p {
+      flex: 2;
+      margin: 0; }
+    .deportistas-data-card .deportistas-data-row span {
+      flex: 1;
+      color: rgba(128, 128, 128, 0.809);
+      font-size: 12px;
+      font-weight: 400;
+      margin-right: 4px; }
+      .deportistas-data-card .deportistas-data-row span.span2 {
+        margin-left: 16px; }
+
+.rechazado {
+  background-color: lightcoral; }
+
+.aceptado {
+  background-color: lightgreen; }
+
+.pendiente {
+  background-color: lightblue; }
+
+.cancelado {
+  background-color: lightgrey;
+  opacity: 0.8; }
 
 .navbar {
   display: flex;
@@ -75,13 +197,13 @@ ul {
   flex-direction: row;
   align-content: center;
   align-items: center;
-  height: 3.4rem;
+  height: 3rem;
   background: #C03221;
   color: #F5F3EE;
   font-family: 'Roboto';
-  font-size: 20px;
+  font-size: 16px;
   z-index: 3;
-  box-shadow: 1px 1px 2px #373D3F; }
+  border-bottom: 1px solid rgba(3, 3, 3, 0.25); }
   .navbar img {
     width: 31px;
     height: 36px;
@@ -90,6 +212,17 @@ ul {
     flex: 3 3 360px;
     margin: 0 0 0 12px;
     text-align: center; }
+  .navbar .btn-back {
+    margin-right: 8px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    font: 600 18px 'Montserrat';
+    background-color: transparent;
+    border: none;
+    color: white; }
+    .navbar .btn-back:hover {
+      color: rgba(128, 128, 128, 0.503); }
 
 @keyframes spin {
   to {
@@ -97,10 +230,15 @@ ul {
 
 .loader {
   animation: spin 1s ease-in-out infinite alternate both;
-  height: 100px;
-  position: relative;
-  width: 100px;
-  margin: auto; }
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -30px;
+  display: none;
+  z-index: 10; }
   .loader svg:not(#circle-middle) {
     animation: spin 1s ease-in-out infinite alternate both;
     position: absolute;
@@ -152,4 +290,5 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
   padding: 16px;
   font-family: 'Raleway';
-  padding-top: 4.5rem; }
+  font-size: 13px;
+  padding-bottom: 4rem; }

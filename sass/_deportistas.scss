@@ -1,6 +1,6 @@
 
 span {
-    color: $primary-dark;
+    color: $secondary-dark;
 }
 
 .dynatable-search {
@@ -26,7 +26,7 @@ span {
 
 select, input {
     border: none;
-    padding: 10px;
+    padding: 8px;
     background-color: rgba(3,3,3,0.1);
     color: $white;
 
@@ -35,13 +35,15 @@ select, input {
     }
 }
 
+
 .table-container {
     display: none;
+    margin-top: 5rem;
 }
 
 #deportistas-table {
     width: 100%;
-    font: 13px 'Raleway';
+    font: 12px 'Raleway';
     margin-bottom: 16px;
     border-spacing: 0px;
     border: 1px solid #ccc;
@@ -50,10 +52,10 @@ select, input {
         cursor: pointer;
         transition: background-color 0.3s ease-in;
         background-color: $background;
-        color: $primary-dark;
+        color: $secondary-dark;
 
         &:hover {
-            background-color: $primary-light;
+            background-color: $secondary-light;
         }
 
         &.disabled {
@@ -65,8 +67,8 @@ select, input {
 
     th {
         background-color: $primary;
-        padding: 8px;
         border-bottom: 1px solid $white;
+        height: 3.8rem;
 
         &.hidden{
             display: none;
@@ -78,13 +80,11 @@ select, input {
     }
     td {
         min-width: 0;
-        height: 4rem;
+        height: 3.8rem;
         text-align: start;
-        padding: 16px 8px;
-
-        border-color: $primary-dark;
+        border-color: $secondary-dark;
         border-bottom: 1px solid #ccc;
-        font: 400 12px 'Montserrat';
+        font: 400 11px 'Montserrat';
     }
 
 }
@@ -92,4 +92,55 @@ select, input {
 ul {
     margin: 0;
 }
+
+.filtros{
+    display: flex;
+    flex-direction: row;
+    background-color: $primary;
+    box-shadow: 1px 1px 2px $secondary-dark;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+
+    select {
+        width: 14rem;
+    }
+
+    button {
+        width: 10rem;
+        background-color: rgba(3,3,3,0.1);
+        margin-left: auto;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.4s ease;
+        outline: none;
+        &:hover{
+            background-color: rgba(3,3,3,0.25);
+        }
+    }
+
+}
+
+.totales {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    background-color: $primary;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    div {
+        flex: 1;
+        color: $white;
+    }
+
+}
+
+
+
 

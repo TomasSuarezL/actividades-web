@@ -1,5 +1,5 @@
 $circle-count: 13;
-$loader-proportion: 100px;
+$loader-proportion: 60px;
 $animation_config: (
   name: spin,
   duration: 1s,
@@ -22,9 +22,14 @@ $animation_config: (
 .loader {
   animation: sh-setup($animation_config);
   height: $loader-proportion;
-  position: relative;
   width: $loader-proportion;
-  margin: auto;
+  position: fixed;
+  top: 50% ;
+  left: 50% ;
+  margin-top: - $loader-proportion / 2;
+  margin-left: - $loader-proportion / 2;
+  display: none;
+  z-index: 10;
 
   svg:not(#circle-middle) {
     animation: sh-setup($animation_config);
