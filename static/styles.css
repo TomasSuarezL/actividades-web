@@ -27,9 +27,33 @@ select, input {
   select option, input option {
     background-color: #C03221; }
 
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4.3rem; }
+  .tabs-container .btn-tab {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #C03221;
+    font: 400 14px 'Montserrat';
+    border-bottom: 3px solid #C03221;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    outline: none; }
+    .tabs-container .btn-tab:hover {
+      color: #8c1608; }
+    .tabs-container .btn-tab i {
+      margin-right: 8px; }
+    .tabs-container .btn-tab.selected {
+      color: #373D3F;
+      border-color: #373D3F; }
+
 .table-container {
   display: none;
-  margin-top: 5rem; }
+  margin-top: 1rem; }
 
 #deportistas-table {
   width: 100%;
@@ -102,6 +126,53 @@ ul {
   .totales div {
     flex: 1;
     color: #F5F3EE; }
+
+.stats-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  font: 400 13px 'Montserrat'; }
+  .stats-container .stats-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    .stats-container .stats-column .stats-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #CBCBD1; }
+      .stats-container .stats-column .stats-card .stats-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: #C03221;
+        padding: 8px;
+        height: 1.5rem;
+        border-left: 4px solid #C03221;
+        background-color: #F5F3EE; }
+        .stats-container .stats-column .stats-card .stats-row:nth-child(2n+1) {
+          border-bottom: 1px solid rgba(128, 128, 128, 0.303); }
+        .stats-container .stats-column .stats-card .stats-row.header {
+          display: flex;
+          align-items: center;
+          background-color: #C03221;
+          color: white; }
+        .stats-container .stats-column .stats-card .stats-row.pago {
+          color: #8c1608;
+          font: 400 14px 'Montserrat'; }
+        .stats-container .stats-column .stats-card .stats-row i {
+          margin-right: 8px; }
+        .stats-container .stats-column .stats-card .stats-row p {
+          flex: 2;
+          margin: 0; }
+        .stats-container .stats-column .stats-card .stats-row span {
+          flex: 1;
+          color: rgba(128, 128, 128, 0.809);
+          font-size: 12px;
+          font-weight: 400;
+          margin-right: 4px; }
+          .stats-container .stats-column .stats-card .stats-row span.span2 {
+            margin-left: 16px; }
 
 #id-deportista {
   display: none; }

@@ -25,7 +25,7 @@ span {
 }
 
 select, input {
-    border: none;
+    border: none;   
     padding: 8px;
     background-color: rgba(3,3,3,0.1);
     color: $white;
@@ -35,10 +35,44 @@ select, input {
     }
 }
 
+.tabs-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4.3rem;
+
+    .btn-tab {
+        display: flex;
+        align-items: center;
+        border: none;
+        background: transparent;
+        color: $primary;
+        font: 400 14px 'Montserrat';
+        border-bottom: 3px solid $primary;
+        margin-right: 16px;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+        outline: none;
+
+        &:hover {
+            color: $primary-dark;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        &.selected {
+            color: $secondary-dark;
+            border-color: $secondary-dark;
+        }
+
+    }
+
+}
 
 .table-container {
     display: none;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 #deportistas-table {
@@ -141,6 +175,72 @@ ul {
 
 }
 
+.stats-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    font: 400 13px 'Montserrat';
 
+    .stats-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .stats-card{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $secondary-light;
+
+            .stats-row{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: $primary;
+                padding: 8px;
+                height: 1.5rem;
+                border-left: 4px solid $primary;
+                background-color: $white;
+
+                &:nth-child(2n+1) {
+                    border-bottom: 1px solid $primary30;
+                }
+        
+                &.header {
+                    display: flex;
+                    align-items: center;
+                    background-color: $primary;
+                    color: white;   
+                }
+        
+                &.pago {
+                    color: $primary-dark;
+                    font: 400 14px 'Montserrat';
+                }
+        
+                i {
+                    margin-right: 8px;
+                }
+        
+                p {
+                    flex: 2;
+                    margin: 0;
+                }
+        
+                span{
+                    flex:1;
+                    color: $primary80;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-right: 4px;
+        
+                    &.span2 {
+                        margin-left: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 

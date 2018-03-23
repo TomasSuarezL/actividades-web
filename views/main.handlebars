@@ -36,33 +36,43 @@
             <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
             <svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle fill=#C03221 cx=50 cy=50 r="4.5"/></svg>
     </div>
-    <div class="table-container">
+    <div class="tabs-container">
+        <button id="btn-list" class="btn-tab"><i class="material-icons">list</i>Listado</button>
+        <button id="btn-stats" class="btn-tab"><i class="material-icons">pie_chart</i>Estadísticas</button>
+    </div>
+    <div id="tab-list" class="table-container">
         <table id="deportistas-table">
             <thead>
-              <th class="hidden">Id</th>
-              <th>Orden</th>
-              <th>Documento</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Debito</th>
-              <th>Tarjeta</th>
-              <th>Descuento</t4h>
-              <th>Num Socio</th>          
-              <th>Observaciones</th>
-              <th>Turno1</th>
-              <th>Turno2</th>
-              <th class="hidden">Habilitado</th>
+            <th class="hidden">Id</th>
+            <th>Orden</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Debito</th>
+            <th>Tarjeta</th>
+            <th>Descuento</t4h>
+            <th>Num Socio</th>          
+            <th>Observaciones</th>
+            <th>Turno1</th>
+            <th>Turno2</th>
+            <th class="hidden">Habilitado</th>
             </thead>
             <tbody>
             </tbody>
         </table>
     </div>
+    <div id="tab-stats" class="stats-container">
+        <div id="column-1" class="stats-column"></div>
+        <div id="column-2" class="stats-column"></div>
+    </div>  
+    
     <div class="totales">
     </div>  
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/libs/moment.min.js"></script>
     <script type="text/javascript" src="/bundle.js"></script>
     <script type="text/javascript" src="/jquery.dynatable.js"></script>
 </body>
