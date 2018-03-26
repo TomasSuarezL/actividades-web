@@ -38,7 +38,7 @@ select, input {
     background: transparent;
     color: #C03221;
     font: 400 14px 'Montserrat';
-    border-bottom: 3px solid #C03221;
+    border-bottom: 1px solid #C03221;
     margin-right: 16px;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
@@ -49,7 +49,7 @@ select, input {
       margin-right: 8px; }
     .tabs-container .btn-tab.selected {
       color: #373D3F;
-      border-color: #373D3F; }
+      border-bottom: 3px solid #373D3F; }
 
 .table-container {
   display: none;

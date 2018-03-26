@@ -53,10 +53,9 @@ $(document).ready(function() {
             $(".table-container").fadeIn(300);
 
             loadAndRenderStats(data[1]);
+            calcularTotales(data[0]);
 
         }).catch((err)=> { alert(err.statusText)});
-
-        
 
     }).click();
 
@@ -110,7 +109,6 @@ function loadAndRenderStats(stats) {
 
     $('#column-1').append(card);
 }
-
 
 function getWithAuthorization(url) {
     return $.ajax({

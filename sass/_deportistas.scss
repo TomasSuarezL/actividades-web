@@ -47,7 +47,7 @@ select, input {
         background: transparent;
         color: $primary;
         font: 400 14px 'Montserrat';
-        border-bottom: 3px solid $primary;
+        border-bottom: 1px solid $primary;
         margin-right: 16px;
         cursor: pointer;
         transition: color 0.3s ease-in-out;
@@ -63,7 +63,7 @@ select, input {
 
         &.selected {
             color: $secondary-dark;
-            border-color: $secondary-dark;
+            border-bottom: 3px solid $secondary-dark;
         }
 
     }
