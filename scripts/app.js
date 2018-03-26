@@ -3,7 +3,8 @@ var baseActividadesUrl = "http://192.168.2.4/actividadesapi/api/";
 
 $(document).ready(function() {
 
-    $('.navbar').append('<button type="button" class="btn-back" ><i class="material-icons">exit_to_app</i></button>').click(() => {
+    $('.navbar').append('<button type="button" class="btn-back" ><i class="material-icons">exit_to_app</i></button>')
+    $('.btn-back').click(() => {
         $(".table-container").fadeOut(200);
         $('.loader').fadeIn(200);
         $.get('/logout')
