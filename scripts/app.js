@@ -102,6 +102,8 @@ function showStats() {
 
 function loadAndRenderStats(stats) {
 
+    $('#column-1').empty();
+
     let card = $('<div class="stats-card"></div>');
     card.append("<div class='stats-row header'><i class='material-icons'>monetization_on</i><p>Cobros Débitos</p></div>");
     card.append(stats.map(val => `<div class='stats-row'><p>${moment().month(val.month-1).format("MMMM")}</p><p>${val.descripcion}</p><p>${val.importe} $</p></div>`));
